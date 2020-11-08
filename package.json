@@ -1,16 +1,26 @@
 {
   "name": "weather-icons",
-	"version": "2.0.10",
+  "version": "2.0.10",
   "description": "222 weather themed icons inspired by Font Awesome and ready for Bootstrap",
-  "scripts": {},
+  "scripts": {
+    "less-to-css": "lessc less/weather-icons.less css/weather-icons.css; lessc less/weather-icons-wind.less css/weather-icons-wind.css",
+    "sass-to-css": "node-sass --output-style expanded sass/weather-icons.scss > css/weather-icons.css; ./node_modules/.bin/node-sass --output-style compressed sass/weather-icons.scss > css/weather-icons.min.css; node-sass --output-style expanded sass/weather-icons-wind.scss > css/weather-icons-wind.css; node-sass --output-style compressed sass/weather-icons-wind.scss > css/weather-icons-wind.min.css"
+  },
   "authors": [
     "Erik Flowers <erik@helloerik.com>"
   ],
   "license": "MIT",
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "less": "^3.12.2",
+    "node-sass": "^5.0.0"
+  },
   "homepage": "http://erikflowers.github.io/weather-icons/",
-	"keywords": [
-		"css", "icon-font", "weather", "icon", "icons"
-	]
+  "keywords": [
+    "css",
+    "icon-font",
+    "weather",
+    "icon",
+    "icons"
+  ]
 }
